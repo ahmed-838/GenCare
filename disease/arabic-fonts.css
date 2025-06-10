@@ -1,0 +1,26 @@
+/* Arabic Font Support */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700&display=swap');
+  font-style: normal;
+  font-weight: 400;
+}
+
+.rtl {
+  font-family: 'Noto Sans Arabic', 'Tahoma', 'Arial', sans-serif;
+}
+
+.rtl .card-title, 
+.rtl .description,
+.rtl .Disease_info,
+.rtl .resources-title,
+.rtl .resource-description,
+.rtl .resource-link {
+  font-family: 'Noto Sans Arabic', 'Tahoma', 'Arial', sans-serif;
+}
+
+/* Fix for Arabic numbers in badges */
+.rtl .badge {
+  font-family: 'Noto Sans Arabic', 'Tahoma', 'Arial', sans-serif;
+  font-weight: 700;
+}

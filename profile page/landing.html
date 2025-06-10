@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="shortcut icon" href="/img/Logo/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .landing-container {
+            text-align: center;
+        }
+
+
+        .landing-title {
+            margin-top: 20px;
+            font-size: 1.8rem;
+            color: var(--primary-color, #4f2fa2);
+            font-weight: bold;
+        }
+
+        .landing-text {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--text-color, #333);
+        }
+
+        .login-btn {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 1rem;
+            color: white;
+            background-color: var(--primary-color, #4f2fa2);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #3b2378;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="landing-container animate__animated animate__fadeInLeft">
+        <!-- Project Logo -->
+        <div class="container">
+            <img src="/img/Logo/logo.png" alt="Project Logo" class="project-logo object-fit-fill">
+        </div>        
+        <!-- Title -->
+        <h1 class="landing-title">Welcome to Our Website</h1>
+        
+        <!-- Description -->
+        <p class="landing-text">Please log in to access your profile and explore more features.</p>
+        
+        <!-- Login Button -->
+        <a href="/login">
+            <button class="login-btn">Log In</button>
+        </a>
+    </div>
+</body>
+</html>

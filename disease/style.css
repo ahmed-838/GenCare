@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter" , sans-serif;
+    text-transform: capitalize;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+.goBackBtn{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+.goBackBtn a{
+    text-decoration: none;
+    color: #4f2fa2;
+}
+.goBackBtn:hover{
+    transform: translateX(-3px);
+    background-color: #4f2fa2;
+    a{
+      color: white;  
+    }
+}
+
+.Section1 {
+    position: relative;
+    z-index: 1;
+    min-height: 90vh; 
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    transition: background 0.3s ease;
+}
+
+.Section1 .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, #ffb9cc, #95cae4);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+body.dark-mode .Section1 .background {
+    background: linear-gradient(to right, #671e3a, #1e4b65);
+    opacity: 0.7;
+}
+
+
+.card-wrapper{
+    max-width: 1100px;
+    margin: 2% 45px 0%;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+.card-list .card-item{
+    list-style: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-item:hover { 
+    transition: 0.2s all ease-in-out;
+    transform: translateY(-5px);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); */
+}
+
+.card-item .description {
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 1;
+    transform: translateY(10px);
+    transition: opacity 0.4s, transform 0.4s, color 0.3s;
+    height: 50px;
+    display: -webkit-box;    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+body.dark-mode .card-item .description {
+    color: #cccccc;
+}
+
+
+.more{
+    display: flex;
+}
+
+.more h5{
+    margin: 37px 10px;
+    color: #4f2fa2;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    border: 2px solid transparent;
+    margin-bottom: 5% ;
+}
+
+body.dark-mode .card-list .card-item .card-link {
+    background: rgba(30, 30, 30, 0.9);
+    color: #ffffff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-list .card-item .card-link:active{
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover{
+    border-color: #4f2fa2;
+}
+
+body.dark-mode .card-list .card-item .card-link:hover{
+    border-color: #8b6fd6;
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-list .card-link .badge{
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin:  16px 0 18px;
+    color: #b22485;
+    background: #f7dff5;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .card-title{
+    font-size: 1.15rem;
+    color:#000;
+    font-weight: 600;
+}
+
+body.dark-mode .card-list .card-link .card-title{
+    color: #ffffff;
+}
+
+.card-list .card-link .card-btn{
+    height: auto;
+    width: auto;
+    color:#4f2fa2;
+    border-radius: 1.15rem;
+    padding: 5px 10px;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #4f2fa2;
+    transition: color 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+}
+
+body.dark-mode .card-list .card-link .card-btn {
+    color: #8b6fd6;
+    border-color: #8b6fd6;
+}
+
+.card-list .card-link:hover .card-btn{
+    color: #fff;
+    background: #4f2fa2;
+}
+
+body.dark-mode .card-list .card-link:hover .card-btn{
+    color: #fff;
+    background: #8b6fd6;
+}
+
+.card-wrapper .swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #4f2fa2;
+}
+
+.card-wrapper .swiper-pagination-bullet-active{
+    opacity: 1;
+}
+
+.card-wrapper .swipper-slide-btn{
+    color: #4f2fa2;
+    margin-top: -35px;
+}
+
+@media screen and (max-width:768px){
+    .card-wrapper{
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swipper-slide-btn{
+        display: none;
+    }
+    
+}
+
+/* Details Section */
+.Section2{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .Section2 {
+    background: rgba(30, 30, 30, 0.7);
+}
+.DiseaseDetail {
+    width: 100%;
+    padding: 5px;
+}
+
+.Section2 .container {
+    width: 100%;
+}
+
+.btn:active {
+    border: none;
+}
+
+.btn {
+    margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.btn a {
+    color: hsl(230, 62%, 56%);
+    font-weight: 600;
+    text-decoration: none;
+    transform: ease;
+}
+
+.btn a:hover {
+    color: black;
+    border: none;
+}
+
+.btn a i {
+    margin-right: 5px;
+}
+
+.Disease_detail_content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Disease_img {
+    border-radius: 5px;
+    max-height: 500px;
+    width: 80%;
+    overflow: hidden;
+}
+.Disease_info {
+    width: 100%;
+    overflow-y: scroll;
+    height: 500px;
+}
+.Disease_img img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.items {
+    margin-bottom: 1.4rem;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.description {
+    opacity: 0.72;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+}
+
+
+
+.Disease_info::-webkit-scrollbar {
+    width: 2px;
+}
+
+.Disease_info::-webkit-scrollbar-track {
+    border-radius: 8px;
+    box-shadow: inset 0 0 6px reba(0, 0, 0, 0.3);
+}
+
+.Disease_info::-webkit-scrollbar-thumb {
+    background-color: #4f2fa2;
+    border-radius: 8px;
+}
+
+.name {
+    font-weight: 550;
+    color: hsl(230, 62%, 56%);
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .name {
+    color: hsl(230, 80%, 75%);
+}
+
+.description {
+    opacity: 0.72;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .description {
+    opacity: 0.9;
+    color: #e0e0e0;
+}
+
+.gif{
+    background-image: url(Images/baby.gif);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    margin-top: -15%;
+    margin-left: 100.5%;
+}
+
+/* Mobile */
+@media(min-width:320px) and (max-width: 369px){
+    .Section1{
+        width: 150%;
+    }
+    .Section1 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250%;
+        height: 100%;
+        z-index: -1;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, 
+    .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: var(--swiper-pagination-bottom, 8px);
+        top: 93%;
+        left: 10%;
+        width: 80%;
+    }
+    .container{
+        width: 90%;
+    }
+    .Section2{
+        width: 150%;
+    }
+    .Disease_detail_content {
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+        overflow-y: scroll;
+    }
+    .Disease_img {
+        min-width: 100%; 
+        max-height: 300px; 
+    }
+    .gif{
+        display: none;
+    } 
+    .Disease_info {
+        overflow-y: visible; 
+        max-height: none; 
+    }
+
+    .Disease_info::-webkit-scrollbar {
+        display: none; 
+    }
+    /* .resources{
+        margin-top: 90%
+    } */
+}
+
+@media(min-width:370px) and (max-width: 598px){
+    .Section1{
+        width: 150%;
+    }
+    .Section1 .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250%;
+        height: 100%;
+        z-index: -1;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, 
+    .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: var(--swiper-pagination-bottom, 8px);
+        top: 93%;
+        left: 10%;
+        width: 80%;
+    }
+    .container{
+        width: 90%;
+    }
+    .Section2{
+        width: 150%;
+    }
+    .Disease_detail_content {
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+        overflow-y: scroll;
+    }
+    .Disease_img {
+        min-width: 100%; 
+        max-height: 300px; 
+    }
+    .gif{
+        display: none;
+    } 
+    .Disease_info {
+        overflow-y: visible; 
+        max-height: none; 
+    }
+
+    .Disease_info::-webkit-scrollbar {
+        display: none; 
+    }
+}
+
+@media (min-width: 599px) and (max-width:600px) {
+    .Section1{
+        width: 161%;
+    }
+    .container{
+        width: 90%;
+    }
+    .Section2{
+        width: 150%;
+    }
+    .Disease_detail_content {
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+    .Disease_img {
+        min-width: 100%; 
+        max-height: 300px; 
+    }
+    .gif{
+        display: none;
+    }
+    .Disease_info {
+        overflow-y: visible; 
+        max-height: none; 
+    }
+
+    .Disease_info::-webkit-scrollbar {
+        display: none; 
+    }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 899px) {
+    .container{
+        width: 100%;
+    }
+    .gif{
+        display: none;
+    }
+    .Section1 .background{
+        width: 170%;
+    }
+    .Disease_detail_content {
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+        overflow-y: scroll;
+    }
+
+    .Disease_img {
+        min-width: 100%; 
+        max-height: 300px; 
+    }
+    .gif{
+        display: none;
+    }
+    .Disease_info {
+        overflow-y: visible; 
+        max-height: none; 
+    }
+
+    .Disease_info::-webkit-scrollbar {
+        display: none; 
+    }
+}
+@media (min-width: 900px) and (max-width: 1024px) {
+    .Section1{
+        width: 100%;
+    }.Section1 .background{
+        width: 160%;
+    }  
+    .Section2{
+        width: 100%;
+    }
+    .Disease_detail_content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        gap: 0;
+    }.gif{
+        display: none;
+    }
+}@media(min-width: 1245px) and (max-width: 1282px){
+    .Section1{
+        width: 100%;
+    }
+    .container{
+        width: 85%;
+    }   
+    .Section2{
+        width: 100%;
+    }
+    .Disease_detail_content {
+        width: 100%;
+    }
+    .gif{
+        display: none;
+    }
+}
+@media(min-width: 1283px) and (max-width:1440px){
+    .Section1{
+        width: 100%;
+    }
+    .Section1 .background{
+        width: 170%;
+    }
+    .container{
+        width: 93%;
+    }   
+    .Section2{
+        width: 100%;
+    }
+    .Disease_detail_content {
+        width: 100%;
+    }
+    .gif{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+.resources{
+    width: 100%;
+    height: auto;
+    padding: 30px 10px;
+    background: linear-gradient(135deg, #f0f3f7 0%, #e8edf2 100%);
+}
+
+body.dark-mode .resources {
+    background: linear-gradient(135deg, #1a1a1a 0%, #282828 100%);
+}
+    .resource-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }    .resource-item {
+        display: flex;
+        align-items: flex-start;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    
+    body.dark-mode .resource-item {
+        background-color: #2a2a2a;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .resource-icon {
+        font-size: 24px;
+        color: #007BFF;
+        margin-right: 15px;
+    }
+
+    .resource-link {
+        font-weight: bold;
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .resource-link:hover {
+        text-decoration: underline;
+    }    .resource-description {
+        margin: 5px 0 0;
+        font-size: 14px;
+        color: #555;
+        transition: color 0.3s;
+    }
+    
+    body.dark-mode .resource-description {
+        color: #aaaaaa;
+    }
+
+    .resources-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+
+
+
+    
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #eef2f5 100%);
+    color: #000000;
+    min-height: 100vh;
+    transition: background 0.5s ease, color 0.3s ease;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition-delay: 0s;
+}
+
+
+.dark-mode {
+    background: #121212;
+    background-image: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+.top-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.dark-mode-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn {
+    padding: 10px 20px;
+    background-color: #4f2fa2;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.dark-mode-btn:hover {
+    background-color: #333333;
+    border-color: #cccccc;
+}
+
+.lang-btn:hover {
+    background-color: #ffffff;
+    color: #4f2fa2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* RTL support for Arabic */
+.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tahoma', 'Arial', sans-serif;
+}
+
+.rtl .goBackBtn {
+    left: auto;
+    right: 10px;
+}
+
+.rtl .goBackBtn a i {
+    transform: rotate(180deg);
+}
+
+.rtl .top-buttons {
+    left: 10px;
+    right: auto;
+}
+
+.rtl .resource-item {
+    flex-direction: row-reverse;
+}
+
+.rtl .resource-icon {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.rtl .card-link .badge {
+    font-weight: bold;
+}
+
+.rtl .card-link .card-title {
+    font-family: 'Tahoma', 'Arial', sans-serif;
+}
+
+.rtl .btn a i {
+    transform: rotate(180deg);
+}
+
+.rtl .swiper-button-next {
+    transform: rotate(180deg);
+}
+
+.rtl .swiper-button-prev {
+    transform: rotate(180deg);
+}
+
+.toggle-on,
+.toggle-off {
+    font-weight: bold;
+    margin: 0 5px;
+    color: #ffffff;
+}
+
+
+body.dark-mode .dark-mode-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+body.dark-mode .toggle-on {
+    color: #000000;
+}
+
+body.dark-mode .toggle-off {
+    color: #555555; 
+}
+body[dir="rtl"],
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
