@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/img/Logo/logo.ico" type="image/x-icon">
+    <title>Forget & Verification</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <!-- Forget Password Form -->
+          <form action="verification.html" class="forget-password-form">
+            <h2 class="title">Forget Password</h2>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+            <input type="submit" value="Send Code" class="btn solid" />
+          </form>
+
+          <!-- Verification Code Form -->
+          <form action="#" class="verification-form">
+            <h2 class="title">Verification Code</h2>
+            <div class="input-field">
+              <i class="fas fa-key"></i>
+              <input type="text" placeholder="Enter Verification Code" required />
+            </div>
+            <input type="submit" value="Verify" class="btn solid" />
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <!-- Left Panel -->
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Need help?</h3>
+            <p>Welcome to our website</p>
+            <button class="btn transparent" id="verification-btn">Verification</button>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Forgot Password?</h3>
+            <p>Welcome to our website</p>
+            <button class="btn transparent" id="forget-password-btn">Forget Password</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to toggle between forms
+      const forgetPasswordBtn = document.querySelector("#forget-password-btn");
+      const verificationBtn = document.querySelector("#verification-btn");
+      const forgetPasswordForm = document.querySelector(".forget-password-form");
+      const verificationForm = document.querySelector(".verification-form");
+
+      forgetPasswordBtn.addEventListener("click", () => {
+        forgetPasswordForm.style.display = "block";
+        verificationForm.style.display = "none";
+      });
+
+      verificationBtn.addEventListener("click", () => {
+        forgetPasswordForm.style.display = "none";
+        verificationForm.style.display = "block";
+      });
+
+      // Initialize with Forget Password form visible
+      forgetPasswordForm.style.display = "block";
+      verificationForm.style.display = "none";
+    </script>
+  </body>
+</html>
