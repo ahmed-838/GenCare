@@ -20,7 +20,7 @@ GenCare is a comprehensive healthcare solution that combines mobile, web, and AI
 - **API Endpoint:** [https://gen-care-backend.vercel.app/](https://gen-care-backend.vercel.app/)
 
 ### 🤖 AI Model
-- **Repository:** [GenCare Model](https://github.com/ahmed-838/GenCare_Model)
+- **Repository:** [GenCare Model](https://github.com/ahmed-838/AI_Model)
 - **Deployment:** AWS EC2 Instance
 - **Endpoint:** [http://16.171.139.253/](http://16.171.139.253/)
 
